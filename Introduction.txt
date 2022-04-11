@@ -1,0 +1,1 @@
+This text file will be edited. It will cover a brief introduction on SQL. NOT THE DETAIL PARTS (CONCEPTS, STATEMENTS ETC.) OF IT.
