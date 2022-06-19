@@ -32,7 +32,7 @@ SELECT l.description AS left_desc, r.description AS right_desc
 -- || sol 03    || sag 03   ||
 
 -- This is a simple join (inner join). It gives only the 
--- results where the condition is met. To make this outer join,
+-- results where the condition is met. To make this left outer join,
 -- add 'LEFT' before 'JOIN':
 
 SELECT l.description AS left_desc, r.description AS right_desc
