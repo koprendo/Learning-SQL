@@ -61,3 +61,12 @@ SELECT c.name AS cust, c.zip, i.name AS Item, i.description, s.quantity AS Quan,
   
 -- See sale table has item_id and customer_id columns. Thus, you can view sale
 -- table as a junction table.
+
+-- Suppose you want to get all customer data regardless of his/her
+-- sales records. In this case, it becomes a left outer join problem.
+-- The code below gives the result of interest:
+
+SELECT c.name AS cust, c.zip, i.name AS Item, i.description, s.quantity AS Quan, s.price AS Price
+  FROM customer AS c
+  LEFT JOIN sale AS s ON s.customer_id = c.id
+  LEFT JOIN item AS i ON s.item_id = i.id;
