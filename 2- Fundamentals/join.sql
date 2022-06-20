@@ -45,3 +45,19 @@ SELECT l.description AS left_desc, r.description AS right_desc
 -- || sol 02    || NULL       ||
 -- || sol 03    || sag 03     ||
 
+-- You can join (or relate) multiple tables. Suppose you have 3 table:
+-- customer, item, and sale tables. You have unique customers data on 
+-- customer table and unique items data on item table. Sale table consists
+-- of all sales data including customer id and item id. Keep in mind, there
+-- can be a bunch of sales data belongs to a customer with different items
+-- he/she purchased. Likewise, there can be a bunch of sales data for a certain
+-- item that is bought by several customers. With the code below, you can view
+-- details of sales based on sale table joined with customer and item tables.
+
+SELECT c.name AS cust, c.zip, i.name AS Item, i.description, s.quantity AS Quan, s.price AS Price
+  FROM sale AS s
+  JOIN item AS i ON s.item_id = i.id
+  JOIN customer AS c ON s.customer_id = c.id;
+  
+-- See sale table has item_id and customer_id columns. Thus, you can view sale
+-- table as a junction table.
