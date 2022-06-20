@@ -1,0 +1,4 @@
+one-to-one relationship
+one-to-many relationship
+many-to-many relationship
+junction table
