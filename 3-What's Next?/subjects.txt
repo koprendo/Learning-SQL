@@ -1,3 +1,5 @@
 Variables:
   1. user defined
   2. local variable
+
+UNION, UNION ALL
